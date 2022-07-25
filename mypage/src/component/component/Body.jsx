@@ -1,17 +1,16 @@
 import React from 'react';
-import './../css/profile.css';
-import Header from './../component/Header';
-import SubHeader from './../component/SubHeader';
+import Header from './Header';
+import Menu from './Menu';
+import './../css/body.css';
 
-const Profile = () => {
+const Body = () => {
   return (
-    <div id='Profile'>
+    <div className='body'>
       <div id='body'>
         <div className='body-camera'><div className='body-camera-lens'></div></div>
           <div className='content'>
             <Header />
-            <div className></div>
-            <SubHeader />
+            <Menu />
           </div>
       </div>
       <div id='bottom'>
@@ -21,4 +20,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Body;

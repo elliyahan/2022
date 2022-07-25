@@ -60,14 +60,11 @@ const LogDiary = () => {
   return (
     <div className="LogDiary">
       <LogEditor onCreate={onCreate} />
-      <div className='log-diary-count'>
-        <div className='diary-count-num'>전체일기 : <em>{data.length}</em></div>
-        <div className='diary-classify'>
-          <div>만족도 높은 기록 갯수 : {goodCount}</div>
-          <div>만족도 낮은 기록 갯수 : {badCount}</div>
-          <div>만족도 높은 기록 비율 : {goodRatio}</div>
-        </div>
-      </div>
+      <div>전체일기 : {data.length}</div>
+      <div>기분 좋은 일기 갯수 : {goodCount}</div>
+      <div>기분 나쁜 일기 갯수 : {badCount}</div>
+      <div>기분 좋은 일기 비율 : {goodRatio}</div>
+      <LogList onEdit={onEdit} onRemove={onRemove} diaryList={data} />
     </div>
   );
 };

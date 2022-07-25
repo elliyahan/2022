@@ -1,7 +1,11 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const DiaryItem = ({ onRemove, onEdit, id, author, content, emotion,
-  created_date }) => {
+const LogItem = ({onRemove, onEdit, id, author, content, emotion, created_date,}) => {
+  // useEffect를 이용해 어떤 아이템들이 rerendering되고 있는지 확인
+  useEffect(() => {
+    console.log(`${id}번째 아이템 렌더`);
+  });
+  
   // true와 false 값을 갖게 되는데 현재 수정중인지 아닌지 boolean 상태로 값을 보관
   const [isEdit, setIsEdit] = useState(false);
   // toggleIsEdit이 호출되는 순간 원래 가지고 있던 값을 반전 시킨다
@@ -40,12 +44,12 @@ const DiaryItem = ({ onRemove, onEdit, id, author, content, emotion,
     <div className="LogItem">
       <div className="info">
         <span className="author_info">
-          작성자 : {author} | 만족도 : {emotion}
+          | 작성자 : {author} | 감정점수 : {emotion} |
         </span>
         <br />
         <span className="date">{new Date(created_date).toLocaleString()}</span>
       </div>
-      <div className="log-item-content">
+      <div className="content">
         {isEdit ? (
           <>
             <textarea
@@ -75,4 +79,4 @@ const DiaryItem = ({ onRemove, onEdit, id, author, content, emotion,
   );
 };
 
-export default DiaryItem;
+export default LogItem;

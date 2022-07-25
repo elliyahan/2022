@@ -58,12 +58,14 @@
 */
 
 #Log .content {
+    width: 100%;
     background-color: #fff;
-    overflow-y: auto
 }
 
 #Log .log-content {
     width: 100%;
+    height: auto;
+    background-color: #fff;
     display: flex;
     font-family: "Nanum Pen Script";
     align-items: center;
@@ -79,17 +81,35 @@
     height: 100%;
 }
 
-.highlight {
-    background: #f3a95f;
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: #C0C3E6;
+    border-radius: 50%;
+    display: flex;
+    margin: 10px auto 0;
+}
+
+.log-section-date {
+    width: 200px;
+    font-size: 18px;
+    padding: 5px;
+    margin: 2.5px auto;
+    letter-spacing: 1.6px;
+    font-weight: bold;
 }
 
 .react-calendar {
-    width: 350px;
-    max-width: 100%;
+    width: 100%;
+    height: calc(100vh - 180px);
     background: white;
     border: 1px solid #a0a096;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.125em;
+    line-height: 4;
+    font-family: "Nanum Pen Script";
+}
+
+.react-calendar abbr {
+    text-decoration: none;
 }
 
 .react-calendar--doubleView {
@@ -116,9 +136,13 @@
 }
 
 .react-calendar button {
+    height: 60px;
     margin: 0;
     border: 0;
     outline: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .react-calendar button:enabled:hover {
@@ -127,13 +151,17 @@
 
 .react-calendar__navigation {
     display: flex;
-    height: 44px;
+    height: 70px;
+    line-height: 70px;
     margin-bottom: 1em;
 }
 
 .react-calendar__navigation button {
-    min-width: 44px;
+    width: 50px;
+    height: 100%;
+    line-height: 70px;
     background: none;
+    font-size: 20px;
 }
 
 .react-calendar__navigation button:disabled {
@@ -149,23 +177,23 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 0.75em;
+    font-size: 20px;
 }
 
 .react-calendar__month-view__weekdays__weekday {
-    padding: 0.5em;
+    padding: 10px;
 }
 
 .react-calendar__month-view__weekNumbers .react-calendar__tile {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.75em;
+    font-size: 16px;
     font-weight: bold;
 }
 
 .react-calendar__month-view__days__day--weekend {
-    color: #d10000;
+    color: #f00;
 }
 
 .react-calendar__month-view__days__day--neighboringMonth {
@@ -192,39 +220,46 @@
 
 .react-calendar__tile:enabled:hover,
 .react-calendar__tile:enabled:focus {
-    background-color: #e6e6e6;
+    background-color: rgba(192, 195, 230, 0.5);
+    border-radius: 50%;
 }
 
 .react-calendar__tile--now {
-    background: #ffff76;
+    background: #a1a7e8;
+    border-radius: 50%;
 }
 
 .react-calendar__tile--now:enabled:hover,
 .react-calendar__tile--now:enabled:focus {
-    background: #ffffa9;
+    background: #C0C3E6;
 }
 
 .react-calendar__tile--hasActive {
-    background: #76baff;
+    background: lightsteelblue;
+    border-radius: 50%;
 }
 
 .react-calendar__tile--hasActive:enabled:hover,
 .react-calendar__tile--hasActive:enabled:focus {
     background: #a9d4ff;
+    border-radius: 50%;
 }
 
 .react-calendar__tile--active {
-    background: #006edc;
+    background: lightsteelblue;
     color: white;
+    border-radius: 50%;
 }
 
 .react-calendar__tile--active:enabled:hover,
 .react-calendar__tile--active:enabled:focus {
-    background: #1087ff;
+    background: lightsteelblue;
+    border-radius: 50%;
 }
 
 .react-calendar--selectRange .react-calendar__tile--hover {
-    background-color: #e6e6e6;
+    background-color: rgba(192, 195, 230, 0.5);
+    border-radius: 50%;
 }
 
 
@@ -232,6 +267,12 @@
 
 #Log .diary-section {
     width: 50%;
+    height: calc(100vh - 146px);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #fff;
+    border: 1px solid #a0a096;
+    padding: 10px;
+    overflow-y: auto;
 }
 
 
@@ -252,15 +293,132 @@
     }
 }
 
-#root {
-    background-color: white;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+#Log .LogDiary {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#Log .LogDiary .log-diary-count {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#Log .LogDiary .diary-count-num {
+    width: 350px;
+    font-size: 20px;
+    margin: 75px auto 20px;
+    letter-spacing: 1.8px;
+    text-align: center;
+}
+
+#Log .LogDiary .diary-count-num em {
+    font-weight: bold;
+    color: #a1a7e8;
+}
+
+#Log .LogDiary .diary-classify {
+    width: 200px;
+    line-height: 40px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    font-size: 16px;
+    border: 1px solid #C0C3E6;
+    border-radius: 20px;
+    padding: 0 10px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#Log .LogDiary .log-diary-count,
+#Log .LogDiary .log-diary-count .diary-classify {
+    display: flex;
+    flex-direction: column;
+}
+
+#Log .LogDiary .LogEditor {
+    margin-left: 30px;
+}
+
+#Log .LogDiary .LogEditor h2 {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px 0;
+    letter-spacing: 1.8px;
+}
+
+#Log .LogDiary .LogEditor input {
+    display: block;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    background-color: transparent;
+    border: 2px solid #a1a7e8;
+    border-radius: 24px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 16px;
+}
+
+#Log .LogDiary .LogEditor input:focus {
+    outline: none;
+}
+
+#Log .LogDiary .LogEditor textarea {
+    display: block;
+    width: 400px;
+    height: 300px;
+    margin: 10px auto;
+    border: 2px solid #a1a7e8;
+    border-radius: 16px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#Log .LogDiary .LogEditor textarea:focus {
+    outline: none;
+}
+
+#Log .LogDiary .log-editor-submit {
+    width: 400px;
+    margin: 10px auto;
+    justify-content: space-between;
+    display: flex;
+}
+
+#Log .LogDiary .log-editor-submit select {
+    width: 100px;
+    height: 30px;
+    border: 2px solid #C0C3E6;
+    border-radius: 16px;
+    text-align: center;
+}
+
+#Log .LogDiary .log-editor-submit select:focus {
+    outline: none;
+    border-color: #a1a7e8;
+}
+
+#Log .LogDiary .log-editor-submt-btn button {
+    width: 100px;
+    height: 30px;
+    border: 2px solid #C0C3E6;
+    border-radius: 16px;
+    text-align: center;
+}
+
+#Log .LogDiary .DiaryList .menu_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 /*  MyButton */
 
-.MyButton {
+#Log .LogButton {
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -274,23 +432,23 @@
     font-family: "Nanum Pen Script";
 }
 
-.MyButton_default {
+#Log .LogButton_default {
     background-color: #ececec;
     color: black;
 }
 
-.MyButton_positive {
-    background-color: #ffccff;
+#Log .LogButton_positive {
+    background-color: #C0C3E6;
 }
 
-.MyButton_negative {
+#Log .LogButton_negative {
     background-color: #ffe4c0;
 }
 
 
 /* Header */
 
-header {
+#Log .log-diary-header {
     padding-top: 20px;
     padding-bottom: 20px;
     /* flex 속성을 주게 되면 <div> 가로로 바뀐다 */
@@ -299,37 +457,37 @@ header {
     border-bottom: 1px solid #e2e2e2;
 }
 
-header>div {
+#Log .log-diary-header>div {
     display: flex;
 }
 
 
 /* justify-center:center head 텍스트 중앙에 위치 시킨다 */
 
-header .head_text {
+#Log .log-diary-header .head_text {
     width: 50%;
     font-size: 25px;
     justify-content: center;
 }
 
-header .head_btn_left {
+#Log .log-diary-header .head_btn_left {
     width: 25%;
     justify-content: start;
 }
 
-header .head_btn_right {
+#Log .log-diary-header .head_btn_right {
     width: 25%;
     justify-content: end;
 }
 
-header button {
+#Log .log-diary-header button {
     font-family: "Nanum Pen Script", cursive;
 }
 
 
 /*DiaryList*/
 
-.DiaryList .menu_wrapper {
+#Log .LogList .menu_wrapper {
     margin-top: 20px;
     margin-bottom: 30px;
     /* div 요소들이 한줄로 정렬 */
@@ -338,16 +496,22 @@ header button {
     justify-content: space-between;
 }
 
-.DiaryList .menu_wrapper .right_col {
-    /* display flex 아래 모든 넓이를 자신이 차지하게 됨 => right-col 남은 영역 전체의 넓이를 갖게 됨 */
-    flex-grow: 1;
+#Log .LogList .menu_wrapper .left_col {
+    width: 50%;
 }
 
-.DiaryList .menu_wrapper .right_col button {
-    width: 100%;
+#Log .LogList .menu_wrapper .left_col select {
+    width: 40%;
+    height: 40px;
+    margin: 0 10px;
 }
 
-.DiaryList .ControlMenu {
+#Log .LogList .menu_wrapper .left_col select:focus {
+    outline-color: #a1a7e8;
+}
+
+#Log .LogList .ControlMenu {
+    width: 50%;
     margin-right: 10px;
     border: none;
     border-radius: 5px;
@@ -361,10 +525,29 @@ header button {
     font-size: 18px;
 }
 
+#Log .LogList .menu_wrapper .right_col {
+    /* display flex 아래 모든 넓이를 자신이 차지하게 됨 => right-col 남은 영역 전체의 넓이를 갖게 됨 */
+    flex-grow: 1;
+}
 
-/* DiaryItem */
+#Log .LogList .menu_wrapper .right_col button {
+    width: 90%;
+}
 
-.DiaryItem {
+#Log .LogList .log-list-total {
+    font-size: 20px;
+    letter-spacing: 1.6px;
+    padding-bottom: 15px;
+}
+
+#Log .LogList .log-list-total em {
+    color: #9097e6;
+}
+
+
+/* LogItem */
+
+#Log .LogItem {
     padding-top: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid #e2e2e2;
@@ -372,7 +555,7 @@ header button {
     justify-content: space-between;
 }
 
-.DiaryItem .emotion_img_wrapper {
+#Log .LogItem .emotion_img_wrapper {
     cursor: pointer;
     min-width: 120px;
     height: 80px;
@@ -381,22 +564,22 @@ header button {
     justify-content: center;
 }
 
-.DiaryItem .info_wrapper {
+#Log .LogItem .info_wrapper {
     flex-grow: 1;
     margin-left: 20px;
     cursor: pointer;
 }
 
-.DiaryItem .diary_date {
+#Log .LogItem .diary_date {
     font-weight: bold;
     font-size: 25px;
     margin-bottom: 5px;
 }
 
-.DiaryItem .diary_content_preview {
+#Log .LogItem .diary_content_preview {
     font-size: 18px;
 }
 
-.DiaryItem .btn_wrapper {
+#Log .LogItem .btn_wrapper {
     min-width: 70px;
 }

@@ -1,0 +1,30 @@
+#Profile {
+    width: 100vw;
+    height: 100vh;
+}
+
+#Profile .content {
+    border-radius: 8px;
+}
+
+#Profile #SubHeader {
+    width: 80px;
+    height: calc(100% - 20px);
+    flex-direction: column;
+    justify-content: space-start;
+    align-items: flex-start;
+}
+
+#Profile #SubHeader .subheader-left {
+    width: 100%;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+#Profile #SubHeader .subheader-left button {
+    margin-right: 5px;
+}
+
+#Profile #SubHeader .subheader-right {
+    display: none;
+}

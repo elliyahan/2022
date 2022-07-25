@@ -35,7 +35,7 @@
 }
 
 #Header .header-right {
-    width: 200px;
+    width: 220px;
     height: 90%;
     line-height: 100%;
     position: relative;
@@ -71,7 +71,7 @@
     border-radius: 50%;
     position: absolute;
     top: 0;
-    right: 136px;
+    left: 56px;
     text-align: center;
     line-height: 10px;
 }

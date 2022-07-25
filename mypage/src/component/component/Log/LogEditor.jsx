@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const LogEditor = ({ onCreate }) => {
   const authorInput = useRef();
@@ -40,7 +40,7 @@ const LogEditor = ({ onCreate }) => {
 
   return (
     <div className="LogEditor">
-      <h2>오늘의 학습 기록</h2>
+      <h2>오늘의 일기</h2>
       <div>
         <input
           ref={authorInput}
@@ -57,21 +57,21 @@ const LogEditor = ({ onCreate }) => {
           onChange={handleChangeState}
         />
       </div>
-      <div className="log-editor-submit">
+      <div>
         <select
           name="emotion"
           value={state.emotion}
-          onChange={handleChangeState}>
-          <option value='null'>만족도</option>
-          <option value={1}>20%</option>
-          <option value={2}>40%</option>
-          <option value={3}>60%</option>
-          <option value={4}>80%</option>
-          <option value={5}>100%</option>
+          onChange={handleChangeState}
+        >
+          <option value={1}>1</option>
+          <option value={2}>2</option>
+          <option value={3}>3</option>
+          <option value={4}>4</option>
+          <option value={5}>5</option>
         </select>
-        <div className="log-editor-submt-btn">
-          <button onClick={handleSubmit}>기록 저장하기</button>
-        </div>
+      </div>
+      <div>
+        <button onClick={handleSubmit}>일기 저장하기</button>
       </div>
     </div>
   );
