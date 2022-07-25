@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Yeon+Sung&display=swap");
+#Log {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+/* .react-datepicker {
+    font-size: 1.3rem !important;
+}
+
+.react-datepicker__current-month {
+    font-size: 1.5rem !important;
+}
+
+.react-datepicker__header {
+    padding-top: 6px !important;
+}
+
+.react-datepicker__navigation {
+    top: 13px !important;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day {
+    margin: 0.5rem !important;
+}
+
+.saturday {
+    color: rgb(0, 0, 255) !important;
+}
+
+.sunday {
+    color: rgb(255, 0, 0) !important;
+}
+
+.react-datepicker__day--disabled {
+    color: #cccccc !important;
+}
+
+.normal-day {
+    background: white !important;
+    color: black !important;
+    width: 28px;
+    height: 28px;
+    line-height: 1.8;
+    text-align: center;
+    padding: 2px !important;
+}
+
+.selected-day {
+    background: navy !important;
+    color: white !important;
+    border-radius: 50% !important;
+    font-weight: 700;
+}
+*/
+
+#Log .content {
+    background-color: #fff;
+    overflow-y: auto
+}
+
+#Log .log-content {
+    width: 100%;
+    display: flex;
+    font-family: "Nanum Pen Script";
+    align-items: center;
+    align-content: center;
+}
+
+
+/* Calendar Section */
+
+.log-section {
+    background-color: #fff;
+    width: 50%;
+    height: 100%;
+}
+
+.highlight {
+    background: #f3a95f;
+}
+
+.react-calendar {
+    width: 350px;
+    max-width: 100%;
+    background: white;
+    border: 1px solid #a0a096;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.125em;
+}
+
+.react-calendar--doubleView {
+    width: 700px;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer {
+    display: flex;
+    margin: -0.5em;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer>* {
+    width: 50%;
+    margin: 0.5em;
+}
+
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.react-calendar button {
+    margin: 0;
+    border: 0;
+    outline: none;
+}
+
+.react-calendar button:enabled:hover {
+    cursor: pointer;
+}
+
+.react-calendar__navigation {
+    display: flex;
+    height: 44px;
+    margin-bottom: 1em;
+}
+
+.react-calendar__navigation button {
+    min-width: 44px;
+    background: none;
+}
+
+.react-calendar__navigation button:disabled {
+    background-color: #f0f0f0;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+    background-color: #e6e6e6;
+}
+
+.react-calendar__month-view__weekdays {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+    padding: 0.5em;
+}
+
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.react-calendar__month-view__days__day--weekend {
+    color: #d10000;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+    color: #757575;
+}
+
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+    padding: 2em 0.5em;
+}
+
+.react-calendar__tile {
+    max-width: 100%;
+    padding: 10px 6.6667px;
+    background: none;
+    text-align: center;
+    line-height: 16px;
+}
+
+.react-calendar__tile:disabled {
+    background-color: #f0f0f0;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+    background-color: #e6e6e6;
+}
+
+.react-calendar__tile--now {
+    background: #ffff76;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+    background: #ffffa9;
+}
+
+.react-calendar__tile--hasActive {
+    background: #76baff;
+}
+
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+    background: #a9d4ff;
+}
+
+.react-calendar__tile--active {
+    background: #006edc;
+    color: white;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+    background: #1087ff;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover {
+    background-color: #e6e6e6;
+}
+
+
+/* Diary Section */
+
+#Log .diary-section {
+    width: 50%;
+}
+
+
+/* 반응형 웹을 도와주는 css 도구 */
+
+@media (min-width: 650px) {
+    .App {
+        width: 640px;
+    }
+}
+
+
+/* 웹 브라우저의 화면이 650px 이하일 경우에 App이라는 컴포넌트는 90%를 차지하게 하겠음 */
+
+@media (max-width: 650px) {
+    .App {
+        width: 90vw;
+    }
+}
+
+#root {
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+/*  MyButton */
+
+.MyButton {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    /* 글자가 잘려서 두줄이 되지 않게 하는 속성 */
+    white-space: nowrap;
+    font-family: "Nanum Pen Script";
+}
+
+.MyButton_default {
+    background-color: #ececec;
+    color: black;
+}
+
+.MyButton_positive {
+    background-color: #ffccff;
+}
+
+.MyButton_negative {
+    background-color: #ffe4c0;
+}
+
+
+/* Header */
+
+header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* flex 속성을 주게 되면 <div> 가로로 바뀐다 */
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+header>div {
+    display: flex;
+}
+
+
+/* justify-center:center head 텍스트 중앙에 위치 시킨다 */
+
+header .head_text {
+    width: 50%;
+    font-size: 25px;
+    justify-content: center;
+}
+
+header .head_btn_left {
+    width: 25%;
+    justify-content: start;
+}
+
+header .head_btn_right {
+    width: 25%;
+    justify-content: end;
+}
+
+header button {
+    font-family: "Nanum Pen Script", cursive;
+}
+
+
+/*DiaryList*/
+
+.DiaryList .menu_wrapper {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    /* div 요소들이 한줄로 정렬 */
+    display: flex;
+    /* 왼쪽 div,  오른쪽 div 간격이 완전히 벌어지게 됨 */
+    justify-content: space-between;
+}
+
+.DiaryList .menu_wrapper .right_col {
+    /* display flex 아래 모든 넓이를 자신이 차지하게 됨 => right-col 남은 영역 전체의 넓이를 갖게 됨 */
+    flex-grow: 1;
+}
+
+.DiaryList .menu_wrapper .right_col button {
+    width: 100%;
+}
+
+.DiaryList .ControlMenu {
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ececec;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    font-family: "Nanum pen Script";
+    font-size: 18px;
+}
+
+
+/* DiaryItem */
+
+.DiaryItem {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e2e2e2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.DiaryItem .emotion_img_wrapper {
+    cursor: pointer;
+    min-width: 120px;
+    height: 80px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.DiaryItem .info_wrapper {
+    flex-grow: 1;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.DiaryItem .diary_date {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.DiaryItem .diary_content_preview {
+    font-size: 18px;
+}
+
+.DiaryItem .btn_wrapper {
+    min-width: 70px;
+}
