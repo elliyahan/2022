@@ -17,4 +17,10 @@ export const MAP_DATA_STORYBOARD = [
     name: 'third',
     logo: '/img/storyboard/logo/storyboard_logo_4.jpg'
   },
+  {
+    id: 3,
+    text: '그루공방',
+    name: 'fourth',
+    logo: '/img/storyboard/logo/storyboard_logo_3.jpg'
+  }
   ];

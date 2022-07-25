@@ -10,6 +10,7 @@ import { BiChevronDown } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import { AiFillCaretDown } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import StoryBoard4 from './../component/StoryBoard/StoryBoard4';
 
 
 const StoryBoard = () => {
@@ -23,7 +24,8 @@ const StoryBoard = () => {
   const selectComponent = {
     first: <StoryBoard1 />,
     second: <StoryBoard2 />,
-    third: <StoryBoard3 />
+    third: <StoryBoard3 />,
+    fourth: <StoryBoard4 />
   };
   return (
     <div id='StoryBoard'>
