@@ -1,0 +1,69 @@
+/* Image 영역 */
+
+#Image {
+    width: 100vw;
+    height: 100vh;
+}
+
+#Image .image-content {
+    width: 100%;
+    height: calc(100% - 21px);
+    border-radius: 12px;
+    box-shadow: 1px 2px 6px -2px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    display: flex;
+}
+
+#Image .image-content .image-content-left {
+    width: 300px;
+    height: 100%;
+    background-color: #dadada;
+    border-right: 2px solid #E6E7E8;
+}
+
+#Image .image-content .image-content-left .image-content-left-btn-box {
+    width: 100%;
+    display: flex;
+    padding: 15px;
+}
+
+#Image .image-content .image-content-left .image-content-left-btn-box .btn {
+    width: 12px;
+    height: 12px;
+    background-color: #ED695D;
+    border: 1px solid #D04C3E;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+#Image .image-content .image-content-left .image-content-left-btn-box .image-yellow {
+    background-color: #F5BF4F;
+    border-color: #D7A344;
+}
+
+#Image .image-content .image-content-left .image-content-left-btn-box .image-green {
+    background-color: #62C656;
+    border-color: #5EBE4E;
+}
+
+#Image .image-content .image-content-left .image-content-left-title {
+    display: block;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #BABBBC;
+    border-radius: 8px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    padding-left: 10px;
+    color: #383939;
+    font-size: 15px;
+}
+
+#Image .image-content .image-content-right {
+    width: calc(100% - 300.5px);
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
