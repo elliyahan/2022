@@ -16,6 +16,7 @@ import Youtube from './../component/Portfolio/Twitch/Youtube';
 import Explore from './../component/Portfolio/Twitch/Explore';
 import Channel from './../component/Portfolio/Twitch/Channel';
 import Twitch from './../component/Portfolio/Youtube/Twitch';
+import Zetaplan from './../component/Portfolio/Zetaplan/Zetaplan';
 
 const Portfolio = () => {
   SwiperCore.use([Navigation, Pagination]);
@@ -117,6 +118,7 @@ const Portfolio = () => {
                   <SwiperSlide className='portfolio-slide'><Explore /></SwiperSlide>
                   <SwiperSlide className='portfolio-slide'><Channel /></SwiperSlide>
                   <SwiperSlide className='portfolio-slide'><BaeMin /></SwiperSlide>
+                  <SwiperSlide className='portfolio-slide'><Zetaplan /></SwiperSlide>
                 </Swiper>
               </div>
           </div>

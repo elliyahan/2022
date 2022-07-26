@@ -1,0 +1,181 @@
+/* Code 영역 */
+
+#Code {
+    width: 100vw;
+    height: 100vh;
+}
+
+#Code .code-content {
+    width: 100%;
+    height: calc(100% - 60px);
+}
+
+#Code .code-editor:before,
+#Code .code-editor:after,
+#Code .code-editor span.control:before,
+#Code .code-editor span.after:after {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    z-index: 1;
+    transition: all .5s ease-in-out;
+}
+
+#Code .code-content .code-editor {
+    box-sizing: border-box;
+    margin: 40px auto 0 auto;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    background-color: #000;
+    border-radius: 0 0 5px 5px;
+    overflow: auto;
+    transition: all .5s ease-in-out;
+    padding: 10px 0;
+}
+
+#Code .code-editor:before {
+    content: 'Code Editor';
+    font-family: 'Consolas';
+    color: #222;
+    padding-top: 6px;
+    text-align: center;
+    top: 41.5px;
+    width: calc(100% - 33px);
+    height: 39px;
+    line-height: 30px;
+    background-color: #fafafa;
+    border-radius: 5px 5px 0 0;
+}
+
+.code-editor span.control:before {
+    content: '';
+    top: 55px;
+    z-index: 2;
+    padding: 6px;
+    border-radius: 20px;
+}
+
+.code-editor span.control:nth-child(1):before {
+    margin-left: 15px;
+    background-color: #ED6B5F;
+    border: 1px solid #E25B4F;
+    cursor: pointer;
+}
+
+.code-editor span.control:nth-child(2):before {
+    margin-left: 35px;
+    background-color: #F5BF4F;
+    border: 1px solid #D7A344;
+}
+
+.code-editor span.control:nth-child(3):before {
+    margin-left: 55px;
+    background-color: #62C656;
+    border: 1px solid #5EBE4E;
+}
+
+section[class*="language-"],
+div[class*="language-"] {
+    color: #ccc;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    line-height: 1.6;
+    tab-size: 4;
+    hyphens: none;
+    padding-left: 20px;
+}
+
+
+/* Code blocks */
+
+div[class*="language-"] {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+:not(div)>section[class*="language-"],
+div[class*="language-"] {
+    background: #000000;
+}
+
+
+/* Inline code */
+
+section[class*="language-"] em {
+    color: #cc99cd;
+}
+
+section[class*="language-"] strong {
+    color: #e2777a;
+}
+
+section[class*="language-"] b {
+    color: #7ec699;
+}
+
+section[class*="language-"] sub {
+    color: #67cdcc;
+}
+
+div.line-numbers {
+    position: relative;
+    counter-reset: linenumber;
+    padding-bottom: 1px;
+}
+
+div.line-numbers>section {
+    position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -13em;
+    width: 3em;
+    /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    background-color: #322422;
+    user-select: none;
+}
+
+.line-numbers-rows>span {
+    pointer-events: none;
+    display: block;
+    counter-increment: linenumber;
+}
+
+.line-numbers-rows>span:before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    padding-right: 0.8em;
+}
+
+#Code .code-sursor {
+    display: inline-block;
+    width: 12px;
+    height: 6px;
+    background-color: #ccc;
+    opacity: 0;
+    animation: cursorAni 1s infinite;
+    margin-left: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+}
+
+@keyframes cursorAni {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

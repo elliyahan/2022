@@ -1,0 +1,12 @@
+#Zetaplan {
+    width: 100vw;
+    height: 100%;
+}
+
+#Zetaplan .zetaplan-img-wrap {
+    width: 100%;
+}
+
+#Zetaplan .zetaplan-img-wrap .zetaplan-img {
+    width: 100%;
+}

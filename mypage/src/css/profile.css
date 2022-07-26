@@ -177,6 +177,7 @@
 }
 
 #Profile .profile-tab .profile-tab-bottom .profile-tab-des p {
+    width: calc(100% - 240px);
     color: #666;
     line-height: 1.4;
 }
