@@ -29,6 +29,58 @@
     height: 60px;
     background-color: #DADADA;
     border-bottom: 1px solid #ADADAD;
+    display: flex;
+    align-items: flex-end;
+}
+
+#Folder .folder-content .folder-top .folder-top-left {
+    width: 180px;
+    margin-left: 15px;
+    margin-bottom: 8px;
+}
+
+#Folder .folder-content .folder-top .folder-top-left .folder-prev-btn,
+#Folder .folder-content .folder-top .folder-top-left .folder-next-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #F7F7F7;
+    border: 1px solid #b0b0b1;
+    border-radius: 5px;
+    margin-right: 2px;
+}
+
+#Folder .folder-content .folder-top .folder-top-left .folder-prev-btn svg,
+#Folder .folder-content .folder-top .folder-top-left .folder-next-btn svg {
+    margin-top: 2px;
+    filter: invert(84%) sepia(0%) saturate(1342%) hue-rotate(278deg) brightness(87%) contrast(83%);
+}
+
+#Folder .folder-content .folder-top .folder-top-right {
+    width: 600px;
+    margin-bottom: 8px;
+}
+
+#Folder .folder-content .folder-top .folder-top-right .folder-top-img-box {
+    width: 140px;
+    height: 30px;
+    background-color: #6B6B6B;
+    border: 1px solid #b0b0b1;
+    border-radius: 5px;
+    margin-right: 2px;
+}
+
+#Folder .folder-content .folder-top .folder-top-right .folder-top-icon {
+    width: 80px;
+    height: 30px;
+    margin-left: 30px;
+    background-color: #F7F7F7;
+    border: 1px solid #b0b0b1;
+    border-radius: 5px;
+}
+
+#Folder .folder-content .folder-top .folder-top-right .folder-top-icon svg {
+    margin-top: 1.5px;
+    filter: invert(84%) sepia(0%) saturate(1342%) hue-rotate(278deg) brightness(87%) contrast(83%);
 }
 
 #Folder .folder-content .folder-bottom {
@@ -79,6 +131,6 @@
     margin: 25px 30px;
 }
 
-#Folder .folder-content .folder-bottom .folder-bottom-right .folder-bottom-right-icon svg {}
-
-#Folder .folder-content .folder-bottom .folder-bottom-right .folder-bottom-right-icon h6 {}
+#Folder .folder-content .folder-bottom .folder-bottom-right .folder-bottom-right-icon h6 {
+    font-size: 14px;
+}

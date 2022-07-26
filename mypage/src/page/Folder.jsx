@@ -2,8 +2,11 @@ import React from 'react';
 import SubHeader from './../component/SubHeader';
 import Header from './../component/Header';
 import './../css/folder.css'
-import { AiFillGithub, AiFillFolderOpen } from "react-icons/ai";
+import { AiFillGithub, AiFillFolderOpen, AiOutlineTag, AiOutlineBlock } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import { GrFormPrevious, GrFormNext } from "react-icons/gr";
+import { IoExitOutline, IoSettingsSharp } from "react-icons/io5";
+import { MdOutlineViewArray, MdViewArray } from "react-icons/md";
 
 const Folder = () => {
   return (
@@ -14,7 +17,19 @@ const Folder = () => {
             <Header />
             <SubHeader />
             <div className='folder-content'>
-              <div className='folder-top'></div>
+              <div className='folder-top'>
+                <div className='folder-top-left'>
+                <button type='button' className='folder-prev-btn'><GrFormPrevious size='24px' /></button>
+                <button type='button' className='folder-next-btn'><GrFormNext size='24px' /></button>
+                </div>
+                <div className='folder-top-right'>
+                  <button className='folder-top-img-box'><MdViewArray size='26px' fill='#eee' /> <MdOutlineViewArray size='26px' fill='#eee' /> <MdViewArray size='26px' fill='#eee' /> <MdOutlineViewArray size='26px' fill='#eee' /></button>
+                  <button className='folder-top-icon'><AiOutlineBlock size='24px' fill='#333' /></button>
+                  <button className='folder-top-icon'><IoSettingsSharp size='24px' fill='#333' /></button>
+                  <button className='folder-top-icon'><IoExitOutline size='24px' /></button>
+                  <button className='folder-top-icon'><AiOutlineTag size='24px' /></button>
+                </div>
+              </div>
               <div className='folder-bottom'>
                 <div className='folder-bottom-left'>
                   <span>즐겨찾기</span>
