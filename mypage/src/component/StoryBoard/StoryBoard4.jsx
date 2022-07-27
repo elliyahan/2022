@@ -12,6 +12,9 @@ const StoryBoard4 = () => {
       <div className='storyboard-img-wrap'>
         <img src="/img/storyboard/storyboard/storyboard4_3.jpg" alt="" />
       </div>
+      <div className='storyboard-img-wrap'>
+        <img src="/img/storyboard/storyboard/storyboard4_4.jpg" alt="" />
+      </div>
     </div>
   );
 };
