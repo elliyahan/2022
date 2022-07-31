@@ -7,7 +7,7 @@
 * Self Introduction Page / Concept : iMac
 
 > 도메인
->> 
+>> http://myportfolio1225.s3-website.ap-northeast-2.amazonaws.com
 
 > Menu List
 >> Home
