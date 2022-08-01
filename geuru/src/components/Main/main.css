@@ -1,0 +1,25 @@
+#Main {
+    width: 100%;
+    display: flex;
+}
+
+#Main .main-left {
+    width: 10%;
+    margin-left: 5%;
+}
+
+#Main .main-right {
+    width: 80%;
+    margin-right: 5%;
+}
+
+#Main .main-right .main-swiper {
+    margin-top: 45px;
+    width: 80%;
+    height: 500px;
+}
+
+#Main .main-right .main-swiper img {
+    width: 100%;
+    height: 100%;
+}
